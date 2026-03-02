@@ -1,0 +1,56 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.link {
+
+  @apply  no-underline text-2xl font-bold mr-10;
+  color: rgb(236, 113, 24);
+}
+.header{
+ background-color: rgb(241, 241, 241,0.9);
+}
+footer{
+  
+}
+body {
+  @apply font-cairo;
+}
+.lala{
+ 
+}
+.about{
+  @apply w-[350px]  p-10 border border-orange-500 bg-[rgba(241,241,241,0.5)]
+}
+@keyframes carmove{
+  0%  ,100%{
+    transform: translateX(0);
+  }
+  50%{
+    transform: translateX(20px);
+  }
+  
+}
+.animate-carmove{
+  animation: carmove 2s ease-in-out infinite;
+}
+.aboutus{
+  background: #faf5f5;
+background: linear-gradient(160deg, rgba(250, 245, 245, 1) 61%, rgba(247, 120, 0, 1) 100%);
+}
+.login{
+  background-image: url("/public/login.jpg");
+}
+@keyframes login{
+  0%{
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-login{
+  animation: login 0.8s ease-out forwards ;
+}
