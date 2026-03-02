@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from "react-redux"
+import {useSelector } from "react-redux"
 
 import Footer from "../components/Footer";
 
@@ -11,7 +11,7 @@ export default function Checkout(){
     const totalPrice=items.reduce((acc,item)=>acc+item.price*item.quantity,0)
     const shipping=30
     const totalSum= totalPrice+shipping;
-    const dispatch=useDispatch()
+    
     return(
     <>
     <div className="flex flex-col lg:flex-row justify-center gap-10 lg:gap-20 pt-[120px] px-4">

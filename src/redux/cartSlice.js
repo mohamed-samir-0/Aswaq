@@ -20,12 +20,12 @@ const cartSlice=createSlice({
             if(item.quantity>1){
                 item.quantity-=1
             }else{
-                state.items=state.items.filter(i=>i.id!=action.payload)
+                state.items=state.items.filter(i=>i.id!==action.payload)
             }
 
         },
         remove_from_cart:(state,action)=>{
-            state.items=state.items.filter((i)=>i.id!=action.payload)
+            state.items=state.items.filter((i)=>i.id!==action.payload)
 
         }
     }
