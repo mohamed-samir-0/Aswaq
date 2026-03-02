@@ -1,8 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
-import { addTocart } from "../redux/cartSlice";
-import { decreaseQt } from "../redux/cartSlice";
+
 import Footer from "../components/Footer";
-import { Link } from "react-router-dom";
+
 
 export default function Checkout(){
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";                             
 import { useDispatch, useSelector } from "react-redux"; 
 import { addTocart, remove_from_cart } from "../redux/cartSlice"; 
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import { motion } from "framer-motion";
 
 
