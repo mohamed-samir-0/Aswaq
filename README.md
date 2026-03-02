@@ -6,7 +6,7 @@ An e-commerce project built with **React** and **Redux Toolkit**.
 
 ## Live Demo
 
-Check out the live site: [https://aswaq-mohamed-samir-0.vercel.app](https://aswaq-mohamed-samir-0.vercel.app)
+Check out the live site: [https://aswaq-yuqc.vercel.app/](https://aswaq-yuqc.vercel.app/)
 
 ---
 
