@@ -14,7 +14,7 @@ export default function Product() {
   
 
   const dispatch = useDispatch();
-  const cartItems = useSelector((state) => state.cart.items); // جلب كل المنتجات في الكارت
+  const cartItems = useSelector((state) => state.cart.items); 
 
   useEffect(() => {
     const getproduct = async () => {
@@ -64,9 +64,9 @@ export default function Product() {
 
             return (
               <motion.div
-              initial={{ opacity: 0 }}      // البداية مخفية وتحرك شوية لتحت
-  whileInView={{ opacity: 1 }}   // لما تدخل الـ viewport
-  viewport={{ once: true, amount: 0.3 }} // يظهر مرة واحدة، لما 30% من الكارد ظاهر
+              initial={{ opacity: 0 }} 
+  whileInView={{ opacity: 1 }}   
+  viewport={{ once: true, amount: 0.3 }} 
   transition={{ duration: 0.4, delay: index * 0.1 }}
              
                 className="w-full mx-auto max-w-[400px]  border border-orange-300 p-4 shadow-md shadow-orange-500/20 rounded-2xl transition hover:shadow-xl hover:shadow-orange-300/50 font-cairo"

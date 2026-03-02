@@ -12,7 +12,7 @@ export default function Signup(){
         e.preventDefault()
         if(!firstname||!lastname||!email||!password){
             alert("please fill all data");
-            return; //عشان الكود يقف هنا ميكملش
+            return; 
         }
         const users=JSON.parse(localStorage.getItem("users"))||[]
         const exists=users.find((i)=>i.email===email)

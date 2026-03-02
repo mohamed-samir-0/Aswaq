@@ -17,10 +17,10 @@ export default function Navbar() {
   return (
     <div className="pb-3 fixed top-0 left-0 w-full z-50 header border-b-2 border-b-orange-500">
 
-      {/* بدل المارجنات الكبيرة */}
+      
       <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
 
-        {/* اللوجو (نفس حجمك) */}
+     
         <img
           onClick={() => navigate("/")}
           className="cursor-pointer w-[150px] h-auto"
@@ -28,7 +28,7 @@ export default function Navbar() {
           alt=""
         />
 
-        {/* اللينكات (نفس ستايلك) */}
+       
         <div className="hidden md:flex gap-8 mb-2 ml-20">
           <Link to="/" className="link">Home</Link>
           <Link  to="/#products" className="link" href="#products">Products</Link>
@@ -36,7 +36,7 @@ export default function Navbar() {
           <Link to="/about" className="link">About</Link>
         </div>
 
-        {/* اليمين */}
+        
         <div className="flex items-center gap-4">
 
           {currentuser ? (
@@ -67,7 +67,7 @@ export default function Navbar() {
             </div>
           )}
 
-          {/* الكارت (نفس الحجم ونفس الشكل) */}
+         
           <div
             className="relative cursor-pointer text-4xl"
             onClick={() => setopen(!open)}
@@ -89,7 +89,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* dropdown زي ما هو */}
+    
       {open && (
         <div className="absolute right-10 top-20 w-[300px] bg-white border border-orange-500 shadow-xl rounded-xl p-4 z-50">
           {cartItems.length === 0 ? (

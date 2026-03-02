@@ -16,7 +16,7 @@ export default function ScrollToTop() {
       }
     }
 
-    // ⬅️ نستنى الرندر
+    // ⬅️ 
     setTimeout(scroll, 100)
 
   }, [pathname, hash])
