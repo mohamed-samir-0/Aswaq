@@ -1,3 +1,15 @@
+# Aswaq - E-commerce React Project
+
+An e-commerce project built with **React** and **Redux Toolkit**.
+
+---
+
+## Live Demo
+
+Check out the live site: [https://aswaq-mohamed-samir-0.vercel.app](https://aswaq-mohamed-samir-0.vercel.app)
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
