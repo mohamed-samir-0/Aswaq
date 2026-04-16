@@ -1,6 +1,9 @@
 # 🛒 Aswaq - Modern E-Commerce Website
 
 A modern and responsive e-commerce web application built with **React.js**, **Redux Toolkit**, and **Tailwind CSS**.
+# 🛒 Aswaq - Modern E-Commerce Website
+
+A modern and responsive e-commerce web application built with **React.js**, **Redux Toolkit**, and **Tailwind CSS**.
 
 The project provides a smooth shopping experience with product browsing, category filtering, cart management, authentication using localStorage, and responsive design for all devices.
 
