@@ -24,7 +24,7 @@ export default function Carts(){
     {/* image */}
     <div className="w-20 h-20 flex  ">
       <img
-        src={item.image}
+        src={item.thumbnail}
         className="w-full h-full object-contain"
         alt=""
       />

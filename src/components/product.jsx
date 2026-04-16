@@ -19,8 +19,8 @@ export default function Product() {
   useEffect(() => {
     const getproduct = async () => {
       try {
-        const res = await axios.get("https://fakestoreapi.com/products");
-        setProducts(res.data);
+        const res = await axios.get("https://dummyjson.com/products?limit=0");
+        setProducts(res.data.products);
       } catch (error) {
         console.log(error);
       } finally {
@@ -30,9 +30,11 @@ export default function Product() {
     getproduct();
   }, []);
   const FilteredProducts=
-  category==="all"?products:products.filter((i)=>i.category===category)
+  category==="all"?products : products.filter((i)=>i.category===category)
 
   if (loading) return <h2 className="text-center mt-20 text-2xl font-bold">Loading</h2>;
+  console.log([...new Set(products.map((p) => p.category))])
+  const categories=["all",...new Set(products.map((p)=>p.category))]
 
   return (
     <div id="products" className="pt-20">
@@ -41,18 +43,19 @@ export default function Product() {
         <button onClick={() => setCategory("all")} className={`${category==="all"?"bg-orange-500 text-white":"border border-orange-400 text-orange-500"} px-4 py-2  rounded`}>
           All
         </button>
-        <button onClick={() => setCategory("men's clothing")} className={`${category==="men's clothing"?"bg-orange-500 text-white":"border border-orange-400 text-orange-500"} px-4 py-2 border rounded`}>
-          Men
+        <button onClick={() => setCategory("furniture")} className={`${category==="furniture"?"bg-orange-500 text-white":"border border-orange-400 text-orange-500"} px-4 py-2 border rounded`}>
+         furniture
         </button>
-        <button onClick={() => setCategory("women's clothing")} className={`${category==="women's clothing"?"bg-orange-500 text-white":"border border-orange-400 text-orange-500"} px-4 py-2 border rounded`}>
-          Women
+        <button onClick={() => setCategory("groceries")} className={`${category==="groceries"?"bg-orange-500 text-white":"border border-orange-400 text-orange-500"} px-4 py-2 border rounded`}>
+          groceries
         </button>
-        <button onClick={() => setCategory("electronics")} className={`${category==="electronics"?"bg-orange-500 text-white":"border border-orange-400 text-orange-500"} px-4 py-2 border rounded`}>
-          Electronics
+        <button onClick={() => setCategory("beauty")} className={`${category==="beauty"?"bg-orange-500 text-white":"border border-orange-400 text-orange-500"} px-4 py-2 border rounded`}>
+        beauty
         </button>
-        <button onClick={() => setCategory("jewelery")} className={`${category==="jewelery"?"bg-orange-500 text-white":"border border-orange-400 text-orange-500"} px-4 py-2 border rounded`}>
-          Jewelry
+        <button onClick={() => setCategory("fragrances")} className={`${category==="fragrances"?"bg-orange-500 text-white":"border border-orange-400 text-orange-500"} px-4 py-2 border rounded`}>
+           fragrances
         </button>
+        <button onClick={()=>setCategory("laptops")} className={`${category==="laptops"?"bg-orange-500 text-white":"border border-orange-400 text-orange-500"} px-4 py-2 border rounded`}>Laptops</button>
       </div>
 
       <div className="flex justify-center">
@@ -73,11 +76,11 @@ export default function Product() {
                 key={product.id}
               >
                 <div className="h-48 flex items-center justify-center mb-3">
-                  <img className="h-full object-contain" src={product.image} alt="" />
+                  <img className="h-full object-contain" src={product.thumbnail} alt="" />
                 </div>
                 
   
-    <h3 className="text-lg font-semibold line-clamp-2 h-20 ">
+    <h3 className="text-lg font-semibold line-clamp-2 h-10 ">
       {product.title}
     </h3>
     <p className="text-sm text-gray-600 line-clamp-3 h-10  ">

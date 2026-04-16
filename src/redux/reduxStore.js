@@ -21,7 +21,7 @@ export const store = configureStore({
   },
 });
 
-store.subscribe(() => {
+store.subscribe(() => {      //// اى تغيير حيحصل فى الstore ده حيتنفذ
   try {
     localStorage.setItem(
       "cart",
